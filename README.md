@@ -1,5 +1,5 @@
 # Beholder: DnD 5e Party Visualization Tool
-    Beyond doesn't have a free API, so I'm using the [DND5eAPI](http://www.dnd5eapi.co/#)
+   Beyond doesn't have a free API, so I'm using the [DND5eAPI](http://www.dnd5eapi.co/#)
 
 ## Goals for this project
 
