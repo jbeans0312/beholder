@@ -4,14 +4,22 @@ import './index.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
+import { ApolloProvider, InMemoryCache, ApolloClient} from '@apollo/client';
+
+const client = new ApolloClient({
+    uri: 'https://www.dnd5eapi.co/graphql',
+    cache: new InMemoryCache()
+});
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-    <React.StrictMode>
-        <App />
-    </React.StrictMode>
+    <ApolloProvider client={client}>
+        <React.StrictMode>
+            <App />
+        </React.StrictMode>
+    </ApolloProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function
