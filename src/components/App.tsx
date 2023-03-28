@@ -1,15 +1,21 @@
 import React from 'react';
 import '../App.css';
-import { Character, AbilityScores } from '../interfaces/character';
+import { Character } from '../interfaces/character';
 import { StatsPanel } from './card/StatsPanel';
 
 function App() {
-    const testScores: AbilityScores = {str: 10, dex: 13, con: 12, intel: 13, wis: 9, cha: 10};
     const testCharacter: Character = {
         name: 'Testerson Testbane',
         race: 'Human',
         class: 'Monk',
-        abilityScores: testScores,
+        abilityScores: [
+            {name: 'STR', value: 10},
+            {name: 'DEX', value: 13},
+            {name: 'CON', value: 12},
+            {name: 'INT', value: 8},
+            {name: 'WIS', value: 11},
+            {name: 'CHA', value: 14}
+        ],
         proficiencyBonus: 2,
         speed: 30,
         maxHp: 14,
