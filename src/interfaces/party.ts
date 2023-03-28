@@ -1,3 +1,7 @@
+import { Character } from './character';
+
 export type Party = {
-    characters: string;
+    characters: Array<Character>;
+    maxDamage: number;
+    maxRange: number;
 }
