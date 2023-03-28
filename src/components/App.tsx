@@ -19,7 +19,6 @@ function App() {
         proficiencyBonus: 2,
         speed: 30,
         maxHp: 14,
-        currHp: 14,
         ac: 15,
         weapons: ['quarterstaff', 'shortbow'],
         cantrips: ['eldritch-blast'],

@@ -16,7 +16,6 @@ export interface Character {
     proficiencyBonus: number; 
     speed: number;
     maxHp: number;
-    currHp: number;
     ac: number;
     weapons: Array<string>; //array of weapon objects from graphql codegen
     cantrips: Array<string>;
