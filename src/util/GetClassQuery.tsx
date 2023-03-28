@@ -17,14 +17,11 @@ export const QUERY_CLASS_BY_INDEX = gql`
 export function GetClassProficiencies(name: string) {
     const {loading, error, data} = useQuery(QUERY_CLASS_BY_INDEX, {variables: {name}});
 
-    if(loading) return null;
-    if(error || data === undefined) return (
-        <p>
-            Error
-        </p>
-    );
+    if(loading) return 'Fetching proficiencies...';
+    if (error) return `Error! ${error.message}`;
 
     return(
+        
         <>
             <ol>
                 {data.classes.map((entry: Class) => entry.proficiencies.map((prof: Proficiency)=>
