@@ -16,15 +16,16 @@ export interface AbilityScores {
 /** All data necessary to represent a character in DnD */
 export interface Character {
     name: string;
-    race: Race; //race of the character from graphql codegen
-    class: Class; //class of character from graphql codegen
+    race: string; //race of the character from graphql codegen
+    class: string; //class of character from graphql codegen
     abilityScores: AbilityScores; //the six ability scores stored in an ability scores object
     proficiencyBonus: number; 
     speed: number;
-    currHp: number;
     maxHp: number;
+    currHp: number;
     ac: number;
-    weapons: Array<Weapon>; //array of weapon objects from graphql codegen
-    spells: Array<Spell>; //array of spell objects from graphql codegen
-    armor: Armor; //the armor the player is wearing generated from graphql codegen
+    weapons: Array<string>; //array of weapon objects from graphql codegen
+    cantrips: Array<string>;
+    spells: Array<string>; //array of spell objects from graphql codegen
+    armor: string; //the armor the player is wearing generated from graphql codegen
 }
