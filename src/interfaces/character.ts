@@ -1,5 +1,3 @@
-import { Class, Race, Weapon, Spell, Armor } from '../gql/graphql';
-
 /** The six base DND skills 
  *  To calculate modifiers subtract 10 from each score and divide the difference by two,
  *  rounding to nearest 1 or -1
