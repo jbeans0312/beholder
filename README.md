@@ -4,6 +4,7 @@
 ## Goals for this project
 
     - Familiarize myself with REST API
+    - Familiarize myself with GQL through Apollo
     - Resharpen my React TS skills
     - Create something that I can use while running 5e for my friends
 
