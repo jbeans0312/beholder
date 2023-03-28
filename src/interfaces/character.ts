@@ -2,13 +2,9 @@
  *  To calculate modifiers subtract 10 from each score and divide the difference by two,
  *  rounding to nearest 1 or -1
  * */ 
-export interface AbilityScores {
-    str: number;
-    dex: number;
-    con: number;
-    intel: number;
-    wis: number;
-    cha: number;
+export interface AbilityScore {
+    name: string;
+    value: number;
 } 
 
 /** All data necessary to represent a character in DnD */
@@ -16,7 +12,7 @@ export interface Character {
     name: string;
     race: string; //race of the character from graphql codegen
     class: string; //class of character from graphql codegen
-    abilityScores: AbilityScores; //the six ability scores stored in an ability scores object
+    abilityScores: Array<AbilityScore>; //the six ability scores stored in an ability scores object
     proficiencyBonus: number; 
     speed: number;
     maxHp: number;
