@@ -1,4 +1,5 @@
 import React from 'react';
+import './css/CharacterPanel.css';
 import { Character } from '../../interfaces/character';
 
 /**
@@ -13,6 +14,19 @@ import { Character } from '../../interfaces/character';
 export function CharacterPanel(character: Character): JSX.Element {
     return(
         <>
+            <div className='idContainer'>
+                <div className='idNum'>
+                    {character.id}
+                </div>
+            </div>
+            <div className='characterPanel'>
+                <h1>
+                    {character.name}
+                </h1>
+                <span>
+                    {character.race + ' ' + character.class}
+                </span>
+            </div>
         </>
     );
 }

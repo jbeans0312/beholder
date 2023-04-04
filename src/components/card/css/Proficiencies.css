@@ -1,0 +1,20 @@
+.profPanel{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 4px;
+    gap: 10px;
+    padding: 5px;
+}
+
+.profContainer{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10px;
+    padding: 4px;
+}

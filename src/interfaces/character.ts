@@ -9,10 +9,12 @@ export interface AbilityScore {
 
 /** All data necessary to represent a character in DnD */
 export interface Character {
+    id: number;
     name: string;
     race: string; //race of the character from graphql codegen
     class: string; //class of character from graphql codegen
     abilityScores: Array<AbilityScore>; //the six ability scores stored in an ability scores object
+    proficiencies: Array<string>;
     proficiencyBonus: number; 
     speed: number;
     maxHp: number;

@@ -1,0 +1,10 @@
+.aCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 4px;
+    padding: 5px;
+    gap: 50px;
+}

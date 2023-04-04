@@ -28,52 +28,50 @@ export function StatsPanel(character: Character): JSX.Element {
     const [currentHp, incrementHp] = useState(character.maxHp);
 
     return (
-        <>
-            <div className='statsPanel'>
-                {/** start statbar */}
-                <div className='statBar'>
-                    {character.abilityScores.map((stat: AbilityScore) => (
-                        <div key={stat.name} className='stat'>
-                            <span>{stat.name}</span>
-                            <span>{stat.value}</span>
-                            <span style={{ textDecoration: 'underline' }}>
-                                {getModifier(stat.value) >= 0 && '+'}
-                                {getModifier(stat.value)}
-                            </span>
-                        </div>
-                    ))}
-                </div>
-                {/** end statbar */}
-                {/** start vitalsbar */}
-                <div className='vitalsBar'>
-                    <div className='hp'>
-                        <span>
-                            {currentHp}/{character.maxHp}
+        <div className='statsPanel'>
+            {/** start statbar */}
+            <div className='statBar'>
+                {character.abilityScores.map((stat: AbilityScore) => (
+                    <div key={stat.name} className='stat'>
+                        <span>{stat.name}</span>
+                        <span>{stat.value}</span>
+                        <span style={{ textDecoration: 'underline' }}>
+                            {getModifier(stat.value) >= 0 && '+'}
+                            {getModifier(stat.value)}
                         </span>
-                        <div>
-                            <button
-                                onClick={() => {
-                                    if (currentHp < character.maxHp) incrementHp(currentHp + 1);
-                                }}
-                            >
-                                +
-                            </button>
-                            <button
-                                onClick={() => {
-                                    if (currentHp > 0) incrementHp(currentHp - 1);
-                                }}
-                            >
-                               -
-                            </button>
-                        </div>
                     </div>
+                ))}
+            </div>
+            {/** end statbar */}
+            {/** start vitalsbar */}
+            <div className='vitalsBar'>
+                <div className='hp'>
+                    <span>
+                        {currentHp}/{character.maxHp}
+                    </span>
                     <div>
-                        <span>AC: {character.ac}</span>
-                        <span>P Bonus: {character.proficiencyBonus}</span>
+                        <button
+                            onClick={() => {
+                                if (currentHp < character.maxHp) incrementHp(currentHp + 1);
+                            }}
+                        >
+                                +
+                        </button>
+                        <button
+                            onClick={() => {
+                                if (currentHp > 0) incrementHp(currentHp - 1);
+                            }}
+                        >
+                               -
+                        </button>
                     </div>
                 </div>
-                {/** end vitalsbar */}
+                <div>
+                    <span>AC: {character.ac}</span>
+                    <span>P Bonus: {character.proficiencyBonus}</span>
+                </div>
             </div>
-        </>
+            {/** end vitalsbar */}
+        </div>
     );
 }

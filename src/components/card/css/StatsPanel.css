@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     align-content: center;
+    justify-content: center;
     border-style: solid;
     border-width: 2px;
     border-radius: 4px;
@@ -11,6 +12,7 @@
 .statBar{
     display: flex;
     flex-direction: row;
+    justify-content: inherit;
     gap: 5px;
 }
 
@@ -28,10 +30,12 @@
     display: flex;
     flex-direction: row;
     align-content: center;
+    justify-content: inherit;
 }
 
 .hp{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: inherit;
 }

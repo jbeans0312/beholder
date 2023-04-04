@@ -1,6 +1,10 @@
 import React from 'react';
 import { Character } from '../../interfaces/character';
-
+import { CharacterPanel } from './CharacterPanel';
+import { StatsPanel } from './StatsPanel';
+import './css/Card.css';
+import { ProficienciesPanel } from './ProficienciesPanel';
+import { ActionsPanel } from './ActionsPanel';
 /**
  * The Card object holds all of the information to represent a character in the party
  * The top panel displays the ID of the character in the party along with their icon and name
@@ -17,7 +21,11 @@ import { Character } from '../../interfaces/character';
  */
 export function Card(character: Character): JSX.Element {
     return(
-        <>
-        </>
+        <div className='aCard'>
+            {CharacterPanel(character)}
+            {StatsPanel(character)}
+            {ProficienciesPanel(character)}
+            {ActionsPanel(character)}
+        </div>
     );
 }
