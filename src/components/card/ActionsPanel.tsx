@@ -11,7 +11,7 @@ import { SpellAction, WeaponAction } from '../../util/GetActionsQuery';
  * @param character 
  * @returns ActionsPanel JSX
  */
-export function ActionsPanel(character: Character): JSX.Element {
+export function ActionsPanel({character}: {character: Character}): JSX.Element {
     return(
         <div>
             <h2>Weapons</h2>

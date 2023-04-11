@@ -3,8 +3,19 @@
     flex-direction: column;
     justify-content: center;
     border-style: solid;
-    border-radius: 5px;
+    border-radius: 3px;
     border-width: 4px;
+    border-color: #D3756B;
     padding: 5px;
-    gap: 50px;
+    background-color: #F0997D ;
+    width: 350px;
+}
+
+ul > li{
+    display: inline-block;
+    padding: 10px;
+}
+
+li:hover{
+    cursor: pointer;
 }

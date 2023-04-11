@@ -11,7 +11,7 @@ import './css/Proficiencies.css';
  * @returns ProficienciesPanel JSX element
  */
 
-export function ProficienciesPanel(character: Character): JSX.Element {
+export function ProficienciesPanel({character}: {character: Character}): JSX.Element {
     return(
         <div className='profPanel'>
             {ClassProficiencies(character.class)}

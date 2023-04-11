@@ -24,7 +24,7 @@ export function getModifier(stat: number) {
     return modifier;
 }
 
-export function StatsPanel(character: Character): JSX.Element {
+export function StatsPanel({character}: {character: Character}): JSX.Element {
     const [currentHp, incrementHp] = useState(character.maxHp);
 
     return (

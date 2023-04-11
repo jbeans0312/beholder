@@ -1,12 +1,11 @@
 import { gql, useQuery } from '@apollo/client';
-import { Spell, Weapon} from '../gql/graphql';
-import React from 'react';
+import React, { useState } from 'react';
 import '../components/card/css/Actions.css';
 
 export const QUERY_SPELL_BY_INDEX = gql`
-    query SpellByIndex($index: String!){
-        spells(index: $index) {
-            desc
+    query SpellByIndex($name: String!){
+        spells(name: $name) {
+            desc,
             range
         }
     }
@@ -62,9 +61,12 @@ export function WeaponAction(index: string): JSX.Element {
     );
 }
 
-export function SpellAction(index: string): JSX.Element {
-    const {loading, error, data} = useQuery(QUERY_SPELL_BY_INDEX, {variables: {index}});
-    console.log(index);
+export function SpellAction(name: string): JSX.Element {
+    const {loading, error, data} = useQuery(QUERY_SPELL_BY_INDEX, {variables: {name}});
+    console.log(name);
+    
+    const [expanded, toggleExpand] = useState(false);
+
     if(loading) return(
         <span>
             Loading spell data from api...
@@ -79,12 +81,13 @@ export function SpellAction(index: string): JSX.Element {
 
     return(
         <div className='weaponContainer'>
-            
-            <span>{data.spell.name}</span>
+            {expanded ? 
+                <span className='expandTitle' onClick={() => toggleExpand(false)}>{name + ' -'}</span>:
+                <span className='expandTitle' onClick={() => toggleExpand(true)}>{name + ' +'}</span>
+            }
 
-            <span>{data.spell.desc[0]}</span>
-
-            <span>{data.spell.range}</span>
+            {expanded && <span>{data.spells[0].desc[0]}</span>}
+            {expanded &&<span>{data.spells[0].range}</span>}
         </div>
         
     );

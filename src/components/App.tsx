@@ -23,8 +23,8 @@ function App() {
         maxHp: 14,
         ac: 15,
         weapons: ['quarterstaff', 'shortbow'],
-        cantrips: ['eldritch-blast'],
-        spells: ['acid-splash'],
+        cantrips: ['Eldritch Blast'],
+        spells: ['Acid Splash'],
         armor: 'chain-mail'
     };
 
