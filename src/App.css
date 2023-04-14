@@ -1,8 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400&display=swap');
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/shield.css');
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/heart.css');
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/add.css');
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/remove.css');
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/awards.css');
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/girl.css');
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/dice-3.css');
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/crown.css');
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/smile-no-mouth.css');
 
 h1{
   font-family: 'Noto Serif', serif;
   color: #A75D5D;
+}
+
+body{
+  font-family: 'Fira Sans', sans-serif;
+  color: #894c4c
 }
 
 .App{

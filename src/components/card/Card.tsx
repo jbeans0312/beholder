@@ -6,6 +6,7 @@ import './css/Card.css';
 import { ProficienciesPanel } from './ProficienciesPanel';
 import { ActionsPanel } from './ActionsPanel';
 
+
 /**
  * The Card object holds all of the information to represent a character in the party
  * The top panel displays the ID of the character in the party along with their icon and name
@@ -20,6 +21,7 @@ import { ActionsPanel } from './ActionsPanel';
  * @param character 
  * @returns Card JSX element
  */
+
 export function Card(character: Character): JSX.Element {
     const [stat, toggleStat] = useState(false);
     const [prof, toggleProf] = useState(true);
@@ -46,11 +48,21 @@ export function Card(character: Character): JSX.Element {
     return(
         <div className='aCard'>
             {CharacterPanel(character)}
-            <ul>
-                <li onClick={showStat}>STATS</li>
-                <li onClick={showAct}>ACTIONS</li>
-                <li onClick={showProf}>PROFICIENCIES</li>
-            </ul>
+            <div className='bar'>
+                <div className='option' onClick={showStat}>
+                    <i className='gg-girl'></i>
+                    <span>stat.</span>
+                </div>
+                <div className='option' onClick={showProf}>
+                    <i className='gg-awards'></i>
+                    <span>prof.</span>
+                </div>
+                <div className='option' onClick={showAct}>
+                    <i className='gg-dice-3'></i>
+                    <span>act.</span>
+                </div>
+            </div>
+            <hr className='solid'></hr>
             {stat && <StatsPanel character={character}></StatsPanel>}
             {prof && <ProficienciesPanel character={character}></ProficienciesPanel>}
             {act && <ActionsPanel character={character}></ActionsPanel>}

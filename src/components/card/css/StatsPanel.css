@@ -3,17 +3,15 @@
     flex-direction: column;
     align-content: center;
     justify-content: center;
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 4px;
     padding: 4px;
+    gap: 10px;
 }
 
 .statBar{
     display: flex;
     flex-direction: row;
-    justify-content: inherit;
-    gap: 5px;
+    justify-content: space-around;
+
 }
 
 .stat{
@@ -21,7 +19,7 @@
     flex-direction: column;
     align-content: center;
     border-style: solid;
-    border-width: 1px;
+    border-width: 2px;
     border-radius: 10px;
     padding: 4px;
 }
@@ -30,7 +28,7 @@
     display: flex;
     flex-direction: row;
     align-content: center;
-    justify-content: inherit;
+    justify-content: space-around;
 }
 
 .hp{
@@ -38,4 +36,31 @@
     flex-direction: column;
     align-items: center;
     justify-content: inherit;
+}
+
+.hpbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    font-size: 20;
+    width: 100%;
+}
+
+.ac{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3px;
+    font-size: 25px;
+}
+
+button{
+    background-color: inherit;
+    border-style: none;
+    color: inherit;
+}
+
+button:hover{
+    color: #FFC3A1;
 }

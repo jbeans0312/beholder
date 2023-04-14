@@ -11,11 +11,31 @@
     width: 350px;
 }
 
-ul > li{
-    display: inline-block;
-    padding: 10px;
+.bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
-li:hover{
+.baritem{
+    display: flex;
+}
+
+.baritem:hover{
     cursor: pointer;
+}
+
+hr.solid {
+    border-top: 3px solid #A75D5D
+}
+
+.option{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.option:hover{
+    cursor: pointer;
+    color: #FFC3A1;
 }

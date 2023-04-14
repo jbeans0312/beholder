@@ -45,7 +45,10 @@ export function ClassProficiencies(name: string): JSX.Element {
 
     return(
         <div className='profContainer'>
-            <h2>Class Proficiencies</h2>
+            <div className='profHeader'>
+                <i className='gg-crown'></i>
+                <span><strong>Class</strong></span>
+            </div>
             {data.classes.map((entry: Class) => entry.proficiencies.map((prof: Proficiency)=>
                 <div key={prof.index}>
                     <span>
@@ -75,7 +78,10 @@ export function RaceProficiencies(name: string): JSX.Element {
 
     return(
         <div className='profContainer'>
-            <h2>Race Proficiencies</h2>
+            <div className='profHeader'>
+                <i className='gg-smile-no-mouth'></i>
+                <span><strong>Race</strong></span>
+            </div>
             {data.races.map((entry: Race) => entry.starting_proficiencies.map((prof: Proficiency)=>
                 <div key={prof.index}>
                     <span>

@@ -34,7 +34,7 @@ function App() {
                 <div className="col" style={{display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>
                     <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                         <h1 className="display-1" style={{textDecoration: 'italic'}}>Beholder</h1>
-                        {Card(testCharacter)}
+                        <Card {...testCharacter}></Card>
                     </div>
                 </div>
             </div>

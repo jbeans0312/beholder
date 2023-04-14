@@ -17,7 +17,10 @@ export function ProficienciesPanel({character}: {character: Character}): JSX.Ele
             {ClassProficiencies(character.class)}
             {RaceProficiencies(character.race)}
             <div className='profContainer'>
-                <h2>Character Proficiencies</h2>
+                <div className='profHeader'>
+                    <i className='gg-girl'></i>
+                    <span><strong>Character</strong></span>
+                </div>
                 {character.proficiencies.map((str: string)=>
                     <div key={str}>
                         <span>{str}</span>

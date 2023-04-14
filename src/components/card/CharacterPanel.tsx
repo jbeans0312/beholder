@@ -24,7 +24,7 @@ export function CharacterPanel(character: Character): JSX.Element {
                     {character.name}
                 </h1>
                 <span>
-                    {character.race + ' ' + character.class}
+                    <strong>{character.race + ' ' + character.class}</strong>
                 </span>
             </div>
         </>

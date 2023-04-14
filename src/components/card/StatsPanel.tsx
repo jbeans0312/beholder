@@ -45,31 +45,44 @@ export function StatsPanel({character}: {character: Character}): JSX.Element {
             {/** end statbar */}
             {/** start vitalsbar */}
             <div className='vitalsBar'>
+               
+                <div className='ac'>
+                    <i className="gg-shield"></i>
+                    <span><strong>{character.ac}</strong></span>
+                </div>
+                
                 <div className='hp'>
-                    <span>
-                        {currentHp}/{character.maxHp}
-                    </span>
+                    <div className='hpbar'>
+                        <i className="gg-heart"></i>
+                        <span>
+                            <strong>{currentHp}/{character.maxHp}</strong>
+                        </span>
+                    </div>
+                    
                     <div>
                         <button
                             onClick={() => {
                                 if (currentHp < character.maxHp) incrementHp(currentHp + 1);
                             }}
                         >
-                                +
+                            <i className='gg-add'></i>
                         </button>
                         <button
                             onClick={() => {
                                 if (currentHp > 0) incrementHp(currentHp - 1);
                             }}
                         >
-                               -
+                            <i className='gg-remove'></i>
                         </button>
                     </div>
                 </div>
-                <div>
-                    <span>AC: {character.ac}</span>
-                    <span>P Bonus: {character.proficiencyBonus}</span>
+
+                <div className='ac'>
+                    <i className='gg-awards'></i>
+                    <span><strong>+{character.proficiencyBonus}</strong></span>
                 </div>
+                
+                
             </div>
             {/** end vitalsbar */}
         </div>
