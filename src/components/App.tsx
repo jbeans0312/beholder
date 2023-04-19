@@ -29,12 +29,24 @@ function App() {
     };
 
     return (
-        <div className="App" style={{minHeight: '100vh', overflow: 'clip'}}>
-            <div className="row" style={{minHeight: '95vh'}}>
-                <div className="col" style={{display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>
-                    <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+        <div className='container' style={{minHeight: '100vh'}}>
+            <div className="App">
+                <div className="row" style={{minHeight: '95vh'}}>
+                    <div className="col" style={{display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>
                         <h1 className="display-1" style={{textDecoration: 'italic'}}>Beholder</h1>
-                        <Card {...testCharacter}></Card>
+                        <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', flexWrap: 'wrap',
+                            gap: 'space-evenly'}}>
+                            <Card {...testCharacter}></Card>
+                            <Card {...testCharacter}></Card>
+                            <Card {...testCharacter}></Card>
+                            <Card {...testCharacter}></Card>
+                            <Card {...testCharacter}></Card>
+                            <Card {...testCharacter}></Card>
+                            <Card {...testCharacter}></Card>
+                            <Card {...testCharacter}></Card>
+                            <Card {...testCharacter}></Card>
+                            <Card {...testCharacter}></Card>
+                        </div>
                     </div>
                 </div>
             </div>
