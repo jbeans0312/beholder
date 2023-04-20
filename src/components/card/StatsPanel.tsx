@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Character, AbilityScore } from '../../interfaces/character';
 import './css/StatsPanel.css';
 

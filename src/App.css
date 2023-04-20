@@ -19,15 +19,33 @@ h1{
 body{
   font-family: 'Fira Sans', sans-serif;
   color: #894c4c;
-  background-color: #FFC3A1;;
+  background-color: #FFC3A1;
 }
 
 a {
-  color: #894c4c;
+  color: #a16363;
 }
 
 a:hover{
   color: #D3756B;
+}
+
+.hoverable:hover{
+  cursor: pointer;
+  color: #D3756B;
+}
+
+.headerContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.headerImage{
+  filter: invert(71%) sepia(14%) saturate(900%) hue-rotate(330deg) brightness(104%) contrast(110%);
+  height: 50%;
+  width: 50%;
 }
 
 .subtitle {
