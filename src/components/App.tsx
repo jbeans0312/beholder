@@ -31,20 +31,21 @@ function App() {
     return (
         <div className='container' style={{minHeight: '100vh'}}>
             <div className="App">
+                <div className="row" style={{minHeight: '35vh', display: 'flex', alignContent: 'center', flexDirection: 'column'}}>
+                    <h1 className="display-1 mt-5" style={{textDecoration: 'italic'}}>Beholder</h1>
+                    <strong>
+                        <p>
+                            party creator and analysis tool for dnd 5e
+                        </p>
+                        <p>
+                            built on <a href='https://www.dnd5eapi.co/' target='_blank' rel="noreferrer">dnd5eapi.co</a>
+                        </p>
+                    </strong>
+                </div>
                 <div className="row" style={{minHeight: '95vh'}}>
                     <div className="col" style={{display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>
-                        <h1 className="display-1" style={{textDecoration: 'italic'}}>Beholder</h1>
                         <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', flexWrap: 'wrap',
                             gap: 'space-evenly'}}>
-                            <Card {...testCharacter}></Card>
-                            <Card {...testCharacter}></Card>
-                            <Card {...testCharacter}></Card>
-                            <Card {...testCharacter}></Card>
-                            <Card {...testCharacter}></Card>
-                            <Card {...testCharacter}></Card>
-                            <Card {...testCharacter}></Card>
-                            <Card {...testCharacter}></Card>
-                            <Card {...testCharacter}></Card>
                             <Card {...testCharacter}></Card>
                         </div>
                     </div>

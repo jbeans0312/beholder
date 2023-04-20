@@ -26,6 +26,7 @@ export function Card(character: Character): JSX.Element {
     const [stat, toggleStat] = useState(false);
     const [prof, toggleProf] = useState(true);
     const [act, toggleAct] = useState(false);
+    const [currentHp, incrementHp] = useState(character.maxHp);
     // 1 = statsPanel, 2 = proficienciesPanel, 3 = actionsPanel
     const showStat = () => {
         toggleStat(true);
@@ -63,7 +64,7 @@ export function Card(character: Character): JSX.Element {
                 </div>
             </div>
             <hr className='solid'></hr>
-            {stat && <StatsPanel character={character}></StatsPanel>}
+            {stat && <StatsPanel character={character} currentHp={currentHp} incrementHp={incrementHp}></StatsPanel>}
             {prof && <ProficienciesPanel character={character}></ProficienciesPanel>}
             {act && <ActionsPanel character={character}></ActionsPanel>}
         </div>
